@@ -1,3 +1,65 @@
+# reference
+
+https://github.com/OpenZeppelin/workshops/tree/master/01-defender-meta-txs
+
+
+# .env
+
+```
+# polygonscan API KEy
+ETHERSCAN_API_KEY=
+POLYGON_URL=https://polygon-mainnet.g.alchemy.com/v2/
+# private key for 0x...
+PRIVATE_KEY=0x
+PRIVATE_KEY_66=0x
+# defender/relayer
+RELAYER_API_KEY=
+RELAYER_API_SECRET=
+# defender/team API & AUTOTASK
+AUTOTASK_ID=
+TEAM_API_KEY=
+TEAM_API_SECRET=
+# AUTOTASK HOOK
+AUTOTASK_WEBHOOK_URL=https://api.defender.openzeppelin.com/autotasks/
+```
+
+
+# how to run 
+
+deploy  to polygon
+- `yarn deploy`
+
+deploy_result.json
+
+sign 
+- `ID=1 yarn sign`
+
+`tmp/request.json`
+
+sign & manual relay
+- `ID=1 yarn sign`
+- `yarn manualrelay`
+- `yarn events`
+
+autotask code
+- `yarn upload`
+
+sign & webhook
+- `ID=2 yarn sign`
+- `yarn invoke`
+- `yarn events`
+
+sign & relay
+- `ID=2 yarn sign`
+- `yarn relay`
+- `yarn events`
+
+
+---
+
+
+
+
 # Advanced Sample Hardhat Project
 
 This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
