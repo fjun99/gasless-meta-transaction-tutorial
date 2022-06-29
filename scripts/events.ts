@@ -11,7 +11,7 @@ async function main() {
 
   const filterTransferMint = token.filters.Transfer(ethers.constants.AddressZero);
   const events = await token.queryFilter(filterTransferMint);
-  console.log('MintTo (transfer from address(0)')
+  console.log('MintTo : transfer from address(0)')
   console.log('=============')
   console.log(events.map(e => `[${e.blockNumber}] ${e.args.to} => ${e.args.tokenId}`).join('\n'));
   console.log();
